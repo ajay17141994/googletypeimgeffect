@@ -1,0 +1,38 @@
+body{margin:0;padding: 0;}
+*{box-sizing: border-box;}
+.imgwrp{width:100%;text-align: center;}
+.imgspan{width:25%;display:inline-block;height:200px;border:1px solid gainsboro;text-align: center;}
+#myImg {border-radius: 5px; cursor: pointer; transition: 0.3s; }
+#myImg:hover{opacity: 0.7;}
+/* The Modal (background) */
+.modal {display: none; position: fixed; z-index: 1; padding-top: 10px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); }
+
+/* Modal Content (image) */
+.modal-content {margin: auto; display: block; width: 100%;height: 300px;object-fit: cover; }
+/* Caption of Modal Image */
+#caption {margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; height: 150px; }
+
+/* Add Animation */
+.modal-content, #caption {-webkit-animation-name: zoom; -webkit-animation-duration: 0.6s; animation-name: zoom; animation-duration: 0.6s; }
+
+@-webkit-keyframes zoom {from {-webkit-transform:scale(0)} to {-webkit-transform:scale(1)} }
+
+@keyframes zoom {from {transform:scale(0)} to {transform:scale(1)} }
+
+/* The Close Button */
+.close {position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; }
+.close:hover,
+.close:focus {color: #bbb; text-decoration: none; cursor: pointer; }
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {width: 100%; height: unset}
+    .modal .mcwrp{width:100%;}
+    .imgspan{width:49%;}
+
+}
+.mcwrp{width:50%;margin:0 auto;}
+.image{width: 100%; height: 100%; object-fit: cover;} 
+.text{font-weight: 400;font-size: 14px;color:white;padding: 15px 20px;line-height: 22px;color:inherit;}
+.head{font-size: 18px;font-weight: 500;color:inherit;}
+.divider{height: 5px;background: #ddd;}
+.infosection{background: yellowgreen}

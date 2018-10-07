@@ -1,0 +1,45 @@
+<html>
+<head>
+	<style>
+		.cntanrwrpr{width:50%;margin:0 auto;padding: 10px;background-color: aqua; }
+		.row{background-color: red;width:50px;height:50px;border: 1px solid green	}
+		.col{border: 1px solid black}
+	</style>
+</head>
+<body>
+
+<div class="cntanrwrpr" id="cntanrwrpr">dsdcsd</div>
+<script>
+	let container=document.getElementById("cntanrwrpr");
+	let row=3;
+	let col=3;
+	let i;
+	let drawrow=function(){
+		for(i=0;i<row;i++)
+		{
+			var rinput = document.createElement("div");
+			rinput .className="row";
+			document.getElementById("colid").appendChild(rinput);
+		}
+	}
+
+	let drawcol= function(){
+		for(i=0;i<col;i++)
+		{console.log(i);
+			drawrow();
+			var input = document.createElement("div");
+			input .className="col";
+			input .id="colid";
+			document.getElementById("cntanrwrpr").appendChild(input);
+			console.log(document.getElementById("cntanrwrpr"));
+			console.log(i);
+			
+			console.log(i);
+		}
+	}
+
+	drawcol();
+</script>
+</body>
+</html>
+

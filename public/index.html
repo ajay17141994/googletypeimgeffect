@@ -1,0 +1,96 @@
+<html>
+<head></head>
+<body>
+<div class="testing" id="testing">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 123454678921356963323298632669461</div>
+<div id="secondstr">askjcbn cnbdjkcnsjk kscnskdjcns knckjnc kjncsjkdncs jncsdncs snckslcsl </div>
+<script>
+let i;
+let NUMSTRING='1234567 899946 546511 451485146 514651461 46161616 4364649 83156145 64654151 65156';
+console.log(NUMSTRING);
+console.log("LENGTH OF THE NUMSTRING :" +NUMSTRING.length);
+console.log("INDEX OF 899946: "+NUMSTRING.indexOf('899946'));
+console.log("LAST INDEX OF  899946: "+NUMSTRING.lastIndexOf('899946'));
+console.log("SLICE FUNCTION :" + NUMSTRING.slice(7,20));
+console.log("REPLACE FUNCTION FOR 899946: "+NUMSTRING.replace('899946','1111111111111111111111'))
+let str1=document.getElementById('testing').innerText;
+let str2=document.getElementById('secondstr').innerText;
+console.log("UPPERCASE FUNCTION :"+ str1.toUpperCase());
+console.log("LOWERCASE FUNCTION :"+ str2.toLowerCase());
+console.log("CONCAT FUNCTION : "+str1.concat(" "+str2));
+console.log("CHARAT FUNCTION : "+str1.charAt(2));
+console.log("CVHARCODEAT FUNCTION : "+str1.charCodeAt(2));
+var number1=7611947737885280414894307147494700454582014;
+console.log("TYPE OF NUMBER1 BEFORE TOSTRING FUNCTION :" +typeof(number1));
+var number1=number1.toString();
+console.log("TYPE OF NUMBER :"+typeof(number1));
+var demonumber=125.2158;
+console.log("TOFIXED FUNCTION :"+demonumber.toFixed(0));
+console.log("TOFIXED FUNCTION :"+demonumber.toFixed(2));
+console.log("TOFIXED FUNCTION :"+demonumber.toFixed(3));
+let numarray=[12, 12, 121, 134646];
+console.log(numarray);
+for(i=0;i<numarray.length;i++)
+{
+	console.log(numarray[i]);
+}
+
+let strarray=['abhay','kumar','rajesh','manoj','suraj','ankita','ramesh'];
+console.log(strarray);
+for(i=0;i<strarray.length;i++)
+{
+	console.log(strarray[i]);
+}
+
+let strarray2=new Array('saab','bmw','maruti')
+console.log(strarray2);
+strarray2[1]="rahhh";
+console.log(strarray2);
+
+let strobject={firstname:'abhay',lastname:'kumar',age:22, location:'mumbai'};
+console.log(strobject);
+for (var key in strobject)
+{
+    var value = strobject[key];
+    console.log(key);
+}
+console.log("LENGTH OF STROBJECT: "+strarray2.length);
+console.log("SORTED ARRAY: "+strarray2.sort());
+var d=new Date();
+console.log("date d="+d)
+var stringdate=new Date()
+stringdate=stringdate.toString();
+console.log("date after tostring() = "+stringdate);
+var stringdate=new Date()
+stringdate=stringdate.toUTCString();
+console.log("date after toUTCstring() = "+stringdate)
+var stringdate=new Date()
+stringdate=stringdate.toDateString();
+console.log("date after toDateString() = "+stringdate)
+var datesample= new Date();
+console.log("year= "+datesample.getFullYear());
+console.log("Month= "+datesample.getMonth());
+console.log("date= "+datesample.getDate());
+console.log("hour= "+datesample.getHours());
+console.log("Minute= "+datesample.getMinutes());
+console.log("Sec= "+datesample.getSeconds());
+console.log("milliseconds= "+datesample.getMilliseconds());
+console.log("day= "+datesample.getDay());
+console.log(Date.now());
+// maths functions
+
+console.log("PI Value= "+Math.PI);
+console.log("round function 4.7= "+Math.round(4.7));
+console.log("round dunction4.4= "+Math.round(4.4));
+console.log("round dunction4.5= "+Math.round(4.5));
+console.log("round dunction4.49= "+Math.round(4.49));
+console.log("power Function8,2= "+Math.pow(8, 2));
+console.log("Square root function 4= "+Math.sqrt(4));
+console.log("Square root function 8= "+Math.sqrt(8));
+console.log("absolute function -4= "+Math.abs(-4));
+console.log("Ceil function 4.4= "+Math.ceil(4.4));
+console.log("FLoor function 4.8= "+Math.floor(4.8));
+console.log(10>9);
+console.log(10===9);
+</script>
+</body>
+</html>

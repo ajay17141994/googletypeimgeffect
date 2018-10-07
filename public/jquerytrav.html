@@ -1,0 +1,100 @@
+<html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.wrap{position: relative;}
+.innerwrap{position:relative;display: table;width:100%;}
+.pagespan{position: absolute;width:50%;display:table-cell;background: red;vertical-align: middle;min-height:150px;top:0;left:0;}
+.page2{background: green;}
+</style>
+
+
+</head>
+	<body>
+	<div class="firstdiv">firstdiv
+		<div class="firstinnerdiv">firstinnerdiv
+			<div class="firstinnerinnerdiv">firstinnerinnerdiv
+				<p>Hey what are you doing</p>
+				<p>i even <span>dont</span> know what i am doing</p>
+				<h4>hhaahhaahahahha just wasting my time</h4>
+				<span>this is span,seriously</span>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+					<li>11
+						<ul class="innerul">
+							<li>11.1</li>
+							<li>11.2</li>
+							<li>11.3</li>
+							<li>11.4</li>
+							<li>11.5</li>
+							<li>12
+								<ul>
+									<li>12.1</li>
+									<li>12.2</li>
+									<li>12.3</li>
+									<li>12.4</li>
+									<li>12.5</li>
+									<li>12.6</li>
+									<li>12.7</li>
+									<li>12.8</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="secondul">
+					<li>abhay</li>
+					<li>akash</li>
+					<li class="pata">akasnsha</li>
+					<li>nikita</li>
+					<li>nayan</li>
+					<li class="pata">ravi</li>
+					<li>hunter</li>
+					<li>gorila</li>
+				</ul>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="wrap">
+		<div class="innerwrap">
+			<span class="pagespan page1" onclick="turn()">ascxas</span>
+			<span class="pagespan page2">ascasc</span>
+		</div>
+	</div>
+	<script>
+		// $('body').children().css('color','red');
+		// $(".firstinnerinnerdiv").children().children().children().css('color','green');
+		// $(".innerul").parent().css('fontSize','22px');
+		// $(".innerul").children().css('border','1px solid red');
+		// $('.secondul').parent().css('border','1px solid green');
+		// $(".firstdiv").closest().css('border','1px solid yellow');
+		// $(".firstdiv").contents().css('color','yellow');
+		// $(".firstdiv").first().css("color",'brown');
+		// $("div p").has('span').css('color','aqua');
+		// console.log($('.firstdiv').children().is('span'));
+		// console.log($('.firstinnerinnerdiv').children().is('span'));
+		// $(".firstinnerinnerdiv").last().css('border','1px solid black');
+		// $('.firstinnerinnerdiv p').next().css('border','1px solid blue');
+		// $('.firstinnerinnerdiv p').nextAll().css('border','1px solid blue');
+		// $('.firstinnerinnerdiv p').nextUntil('span').css('border','1px solid pink');
+		// $(".secondul li").not('.pata').css('css','black');
+		$('.secondul').parentsuntil().css('border','1px solid pink');
+		var turn=function(){
+			$(".page1").animate({left:})
+		}
+	</script>
+	</body>
+</html>

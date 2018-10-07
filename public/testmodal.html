@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="queryuitouch-punc.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+<!-- jQuery library -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+<!-- Latest compiled JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.css"> -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.js"></script> -->
+
+<style>
+/* The Modal (background) */
+.modal {-webkit-animation-name: zoom; -webkit-animation-duration: 0.6s; animation-name: zoom; animation-duration: 0.6s;display: none; position: absolute; z-index: 1; padding-top: 100px; left: 0; top: 0; width: auto; height:auto; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); }
+
+/* Modal Content (image) */
+.modal-content {margin: auto; display: block; width: 100%; }
+/* Caption of Modal Image */
+#caption {margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; height: 150px; }
+
+/* Add Animation */
+/*.modal-content, #caption {-webkit-animation-name: zoom; -webkit-animation-duration: 0.6s; animation-name: zoom; animation-duration: 0.6s; }*/
+
+/*@-webkit-keyframes zoom {from {-webkit-transform:scale(0)} to {-webkit-transform:scale(1)} }*/
+
+/*@keyframes zoom {from {transform:scale(0)} to {transform:scale(1)} }*/
+
+/* The Close Button */
+.close {position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; }
+.close:hover,
+.close:focus {color: #bbb; text-decoration: none; cursor: pointer; }
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {width: 100%; }
+}
+.target-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.modal {
+    -webkit-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+}
+</style>
+<body>
+  <div class="target-area">
+    Click anywhere to launch modal
+
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal" >
+  <span class="close" id="dismissModal">&times;</span>
+  <img class="modal-content" id="img01">
+  <div class="text head">sckna bchjbd jhbchsdc scbkcb  bjhbcjbc kjdbcjksdbc jkbcjkbsdc kjsbcks ckjbjksdcsd cksjbcsdc </div>
+  <div class="text">sckna bchjbd jhbchsdc scbkcb  bjhbcjbc kjdbcjksdbc jkbcjkbsdc kjsbcks ckjbjksdcsd cksjbcsdc </div>
+  <div class="text">sckna bchjbd jhbchsdc scbkcb  bjhbcjbc kjdbcjksdbc jkbcjkbsdc kjsbcks ckjbjksdcsd cksjbcsdc </div>
+  <div class="text">sckna bchjbd jhbchsdc scbkcb  bjhbcjbc kjdbcjksdbc jkbcjkbsdc kjsbcks ckjbjksdcsd cksjbcsdc </div>
+  <div class="text">sckna bchjbd jhbchsdc scbkcb  bjhbcjbc kjdbcjksdbc jkbcjkbsdc kjsbcks ckjbjksdcsd cksjbcsdc </div>
+  <div id="caption"></div>
+</div>
+
+<!-- <div class="modal hide">
+  <div class="modal-header">
+      <h3>Header</h3>
+  </div>
+  <div class="modal-body">
+    Body
+  </div>
+  <div class="modal-footer">
+    <button type="button" id="dismissModal" class="btn">Ok</button>
+  </div>
+</div> -->
+<script>
+var $modal= $('.modal');
+
+$('.target-area').on('click', function (e) {
+    var screeny=e.screenY;
+    console.log(screeny)
+    var screenx=e.screenX
+    console.log(screenx);
+    $(".modal").animate({top: screeny, left: screenx, transform: 'scale(1, 1)'});
+    $modal.show(500);
+    $(".modal").animate({top: '', left: '', transform: '',width:"100%",height:"100%"},);
+});
+
+
+$('#dismissModal').click(function(){
+    $modal.css({top: 0, left: 0, transform: 'scale(0.1, 0.1)',display:'none'});
+    setTimeout(function(){
+        $('.modal').hide()
+    },750);
+});
+
+/*
+$modal.on('hide', function () {    
+    $modal.css({top: 0, left: 0, transform: 'scale(0.1, 0.1)', opacity:'0'});
+    return false;    // uncomment this line to see zoom out
+});
+*/
+
+$modal.on('hidden', function () {
+    $modal.css({top: '', left: '', transform: ''});
+});
+
+
+</script>
+</body>
+</html>

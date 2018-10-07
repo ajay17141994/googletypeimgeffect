@@ -1,0 +1,43 @@
+<html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></head>
+	<body>
+		<form>
+				<input type="text" id="name" placeholder="name" value="" onkeypress="return nameValidate(event)" required>
+				<span class="nameerror" id="nameerror"></span>
+				<input type="text" id="mobileNo" placeholder="name" onkeypress="return mobValidate(event)" required>
+				<span class="nameerror" id="nameerror"></span>
+				<input type="email" id="email" placeholder="name" required>
+				<span class="nameerror" id="nameerror"></span>
+				<input type="text" name="fname" value="" onkeypress="return lettersOnly(event)"/>
+				<input type="submit" value="submit">
+		</form>
+		<script>
+				var name=$("#name").val();
+				console.log(name.length);
+				var nameValidate=function(){
+					console.log(name);
+					 var charCode = event.keyCode;
+					 console.log(charCode);
+					            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 )
+
+					                return true;
+					            else
+					                return false;
+				}
+				var mobile=$("#mobileNo").val();
+				var mobValidate=function(){
+					console.log(mobile);
+					 var charCode = event.keyCode;
+					 console.log(charCode);
+					            if ((charCode > 47 && charCode < 58) || charCode == 8)
+					            	
+
+					                return true;
+					            else
+					                return false;
+				}
+
+				
+		</script>
+	</body>
+</html>
